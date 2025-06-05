@@ -1,194 +1,212 @@
-<!doctype html>
-<html lang="id" data-bs-theme="auto">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Portofolio Saya</title>
-
-    <!-- Bootstrap CSS -->
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-    />
-    <!-- Chart.js -->
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-
-    <style>
-      body {
-        font-family: 'Segoe UI', sans-serif;
-        scroll-behavior: smooth;
-        background-image: url('https://images.unsplash.com/photo-1603791440384-56cd371ee9a7');
-        background-size: cover;
-        background-position: center;
-        background-attachment: fixed;
-        color: white;
-      }
-
-      section {
-        background-color: rgba(0, 0, 0, 0.7);
-        padding: 1.5rem;
-        border-radius: 10px;
-        margin-bottom: 2rem;
-      }
-
-      header,
-      footer {
-        background-color: rgba(0, 0, 0, 0.85);
-      }
-
-      .timeline {
-        position: relative;
-        margin-left: 2rem;
-        padding-left: 2rem;
-        border-left: 4px solid #0d6efd;
-      }
-
-      .timeline h5 {
-        margin-top: 1rem;
-        color: #fff;
-      }
-
-      .chart-container {
-        width: 100%;
-        max-width: 180px;
-        margin: 1rem auto;
-      }
-      
-      .chart-container canvas {
-        width: 100% !important;
-        height: auto !important;
-      }
-
-      .card:hover {
-        transform: scale(1.02);
-        transition: 0.3s;
-      }
-
-      a {
-        color: #0dcaf0;
-      }
-    </style>
-  </head>
-
-  <body>
-    <header class="text-white p-3 mb-4">
-      <div class="container">
-        <h1 class="text-center">Portofolio Saya</h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mirza Azwan Waranggani | Portfolio</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <style>
+    body {
+      background-color: #1f1f2e;
+      color: #fff;
+      font-family: 'Segoe UI', sans-serif;
+      transition: background-color 0.3s, color 0.3s;
+    }
+    .dark-mode {
+      background-color: #fff;
+      color: #000;
+    }
+    .hero {
+      text-align: center;
+      padding: 100px 20px;
+    }
+    .hero img {
+      width: 160px;
+      border-radius: 50%;
+      border: 4px solid #ffb400;
+    }
+    .hero h1 {
+      font-size: 2.5rem;
+      margin-top: 20px;
+    }
+    .hero p {
+      font-size: 1.1rem;
+      color: #cfcfcf;
+    }
+    .btn-custom {
+      background-color: #ffb400;
+      border: none;
+      color: #000;
+    }
+    .section-title {
+      text-align: center;
+      margin-top: 60px;
+      margin-bottom: 30px;
+      font-size: 2rem;
+      font-weight: bold;
+    }
+    .about, .skills, .contact, .certificates, .timeline {
+      padding: 40px 20px;
+    }
+    .skills .icon {
+      font-size: 2rem;
+      margin: 15px;
+    }
+    .footer {
+      background-color: #161622;
+      padding: 20px;
+      text-align: center;
+      color: #aaa;
+    }
+    .certificate-img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+      margin: 0 auto;
+      border: 3px solid #444;
+      border-radius: 10px;
+    }
+    .dark-toggle {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      z-index: 1000;
+    }
+    .timeline-item {
+      margin-bottom: 30px;
+    }
+    .timeline-item h5 {
+      margin-bottom: 5px;
+    }
+    .timeline-line {
+      border-left: 2px solid #ffb400;
+      margin-left: 15px;
+      padding-left: 15px;
+    }
+  </style>
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top" data-aos="slide-down">
+    <div class="container">
+      <a class="navbar-brand" href="#">Mirza Azwan Waranggani</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+          <li class="nav-item"><a class="nav-link" href="#timeline">Timeline</a></li>
+          <li class="nav-item"><a class="nav-link" href="#certificates">Certificates</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+        </ul>
       </div>
-    </header>
+    </div>
+  </nav>
 
-    <main class="container">
+  <!-- Hero Section -->
+  <section class="hero" data-aos="fade-up">
+    <img src="gambar-pribadi.jpg" alt="Mirza Azwan Waranggani" />
+    <h1>Hello, I am Mirza Azwan Waranggani</h1>
+    <p>Cybersecurity | Red Teamer Expertise</p>
+    <a href="#contact" class="btn btn-custom mt-3">Let's Talk</a>
+  </section>
 
-      <!-- Tentang -->
-      <section id="tentang">
-        <h2 class="mb-3">Tentang Saya</h2>
-        <p>
-          Saya merupakan pelajar aktif SMK Taruna Bangsa Bekasi, saya memiliki ketertarikan terhadap teknologi sejak saya berada di kelas 1 SMP. Saya mulai aktif dan fokus di bidang keahlian saya, karena itu saya mulai mempelajari berbagai macam teknologi, mulai dari pemrograman, jaringan/networking, hingga keamanan siber. Sekarang saya juga mulai terlibat dalam komunitas Red Teamer, yang membuat saya semakin bersemangat untuk belajar lebih dalam tentang keamanan siber.
-        </p>
-      </section>
+  <!-- About Section -->
+  <section class="about" id="about" data-aos="fade-right">
+    <div class="container">
+      <h2 class="section-title">About Me</h2>
+      <p class="text-center">
+       I am a cybersecurity professional with a passion for staying up-to-date with the latest threats and technologies. I specialize in red teaming, where I simulate real-world attacks to help organizations strengthen their defenses. My journey in cybersecurity has been driven by a commitment to continuous learning and a desire to make the digital world a safer place. I enjoy collaborating with teams to identify vulnerabilities and implement effective security measures.
+      </p>
+    </div>
+  </section>
 
-      <!-- Roadmap -->
-      <section id="roadmap">
-        <h2 class="mb-3">Roadmap / Timeline</h2>
-        <div class="timeline">
-          <div>
-            <h5>2023 - Belajar Dasar IT</h5>
-            <p>Mengikuti kursus online mengenai dasar jaringan, Linux, dan Python.</p>
-          </div>
-          <div>
-            <h5>2024 - Cybersecurity</h5>
-            <p>Belajar penetration testing, tools seperti Metasploit & Wireshark.</p>
-          </div>
-          <div>
-            <h5>2025 - Sertifikasi CEH</h5>
-            <p>Lulus sertifikasi <strong>Certified Ethical Hacker (CEH)</strong>.</p>
-          </div>
+  <!-- Skills Section -->
+  <section class="skills" id="skills" data-aos="fade-left">
+    <div class="container">
+      <h2 class="section-title">My Skills</h2>
+      <div class="d-flex flex-wrap justify-content-center">
+        <i class="fab fa-html5 icon text-warning" data-aos="slide-up"></i>
+        <i class="fab fa-css3-alt icon text-primary" data-aos="slide-up"></i>
+        <i class="fab fa-js icon text-warning" data-aos="slide-up"></i>
+        <i class="fab fa-bootstrap icon text-purple" data-aos="slide-up"></i>
+        <i class="fab fa-figma icon text-danger" data-aos="slide-up"></i>
+        <i class="fab fa-react icon text-info" data-aos="slide-up"></i>
+        <i class="fab fa-git-alt icon text-orange" data-aos="slide-up"></i>
+        <i class="fab fa-github icon text-orange" data-aos="slide-up"></i>
+      </div>
+    </div>
+  </section>
+
+  <!-- Timeline Section -->
+  <section class="timeline" id="timeline" data-aos="fade-up">
+    <div class="container">
+      <h2 class="section-title">Timeline</h2>
+      <div class="timeline-line">
+        <div class="timeline-item" data-aos="fade-right">
+          <h5>2023</h5>
+          <p>Mulai belajar HTML, CSS, dan JavaScript.</p>
         </div>
-      </section>
-
-      <!-- Progress -->
-      <!-- Progress -->
-<section id="progress">
-  <h2 class="mb-3">Progress Belajar</h2>
-  <div class="row text-center">
-    <div class="col-md-4 d-flex flex-column align-items-center">
-      <h5>Cybersecurity</h5>
-      <div class="chart-container">
-        <canvas id="donut1" class="mx-auto d-block"></canvas>
-      </div>
-    </div>
-    <div class="col-md-4 d-flex flex-column align-items-center">
-      <h5>Programming</h5>
-      <div class="chart-container">
-        <canvas id="donut2" class="mx-auto d-block"></canvas>
-      </div>
-    </div>
-    <div class="col-md-4 d-flex flex-column align-items-center">
-      <h5>Networking</h5>
-      <div class="chart-container">
-        <canvas id="donut3" class="mx-auto d-block"></canvas>
-      </div>
-    </div>
-  </div>
-</section>
-
-
-      <!-- Sertifikat -->
-      <section id="sertifikat">
-        <h2 class="mb-3">Sertifikat</h2>
-        <div class="card shadow-sm">
-          <img src="https://www.eccouncil.org/wp-content/uploads/2022/09/ceh-certification.png" class="card-img-top" alt="CEH Certificate">
-          <div class="card-body bg-dark text-white">
-            <h5 class="card-title">Certified Ethical Hacker (CEH)</h5>
-            <p class="card-text">Sertifikat CEH resmi dari EC-Council telah diperoleh pada tahun 2025 sebagai bukti keahlian dalam ethical hacking dan pengujian keamanan sistem.</p>
-          </div>
+        <div class="timeline-item" data-aos="fade-left">
+          <h5>2024</h5>
+          <p>Membuat proyek website pribadi dan mengikuti kursus UI/UX Design.</p>
         </div>
-      </section>
+        <div class="timeline-item" data-aos="fade-right">
+          <h5>2025</h5>
+          <p>Berpartisipasi dalam Code for Social Change oleh Clevio & ParagonCorp.</p>
+        </div>
+      </div>
+    </div>
+  </section>
 
-      <!-- Kontak -->
-      <section id="kontak">
-        <h2 class="mb-3">Kontak</h2>
-        <p>Email: <a href="mailto:mrz.zwan31@gmail.com">mrz.zwan31@gmail.com</a></p>
-        <p>Email: <a href="mailto:officialstore.mrzz@gmail.com">officialstore.mrzz@gmail.com</a></p>
-        <p>Email: <a href="mailto:mrz.zwan09@outlook.com">mrz.azwan09@outlook.com</a></p>
-        <p>LinkedIn: <a href="https://linkedin.com/in/namasaya" target="_blank">linkedin.com/in/zaa-az1</a></p>
-      </section>
+  <!-- Certificates Section -->
+  <section class="certificates" id="certificates" data-aos="fade-up">
+    <div class="container">
+      <h2 class="section-title">Certificates</h2>
+      <img src="cert-clevio.jpg" alt="Certificate" class="certificate-img" data-aos="zoom-in">
+    </div>
+  </section>
 
-    </main>
+  <!-- Contact Section -->
+  <section class="contact" id="contact" data-aos="fade-up">
+    <div class="container">
+      <h2 class="section-title">Contact</h2>
+      <div class="text-center">
+        <p>Email : <a href="mailto:officialstore.mrzz@gmail.com" style="text-decoration: none; color: inherit;">officialstore.mrzz@gmail.com</a></p>
+        <p>Email : <a href="mailto:mrz.zwan31@gmail.com" style="text-decoration: none; color: inherit;">mrz.zwan31@gmail.com</a></p>
+        <p>Email : <a href="mailto:mirzaazwan.2024@gmail.com" style="text-decoration: none; color: inherit;">mirzaazwan.2024@gmail.com</a></p>
+        <a href="https://wa.me/6287880995907?text=Halo%2C%20saya%20ingin%20bertanya%20tentang%20pengalaman%20dan%20keahlian%20Anda" target="_blank">
+        Hubungi Kami via WhatsApp
+        </a>
+        <div>
+          <a href="https://www.instagram.com/summon_skullz/" class="text-light me-3" data-aos="slide-up"><i class="fab fa-instagram"></i></a>
+          <a href="#" class="text-light me-3" data-aos="slide-up"><i class="fab fa-linkedin"></i></a>
+          <a href="#" class="text-light" data-aos="slide-up"><i class="fab fa-github"></i></a>
+        </div>
+      </div>
+    </div>
+  </section>
 
-    <footer class="text-center text-white">
-      My Portofolio -  Made With Bootstrap 5 &copy;
-    </footer>
+  <!-- Footer -->
+  <footer class="footer">
+    <p>&copy; 2025 Agus Sugandi. All rights reserved.</p>
+  </footer>
 
-    <!-- Bootstrap JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 1000,
+      once: true
+    });
 
-    <!-- Chart.js Donut -->
-    <script>
-      const createDonut = (id, label, value) => {
-        new Chart(document.getElementById(id), {
-          type: 'doughnut',
-          data: {
-            labels: [label, 'Sisa'],
-            datasets: [{
-              data: [value, 100 - value],
-              backgroundColor: ['#0d6efd', '#e9ecef'],
-              borderWidth: 1
-            }]
-          },
-          options: {
-            cutout: '70%',
-            plugins: { legend: { display: false } },
-            responsive: true
-          }
-        });
-      };
-
-      window.onload = () => {
-        createDonut('donut1', 'Cybersecurity', 85);
-        createDonut('donut2', 'Programming', 70);
-        createDonut('donut3', 'Networking', 60);
-      };
-    </script>
-  </body>
+    function toggleDarkMode() {
+      document.body.classList.toggle('dark-mode');
+    }
+  </script>
+</body>
 </html>
